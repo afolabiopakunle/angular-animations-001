@@ -7,15 +7,9 @@ import { trigger, state, transition, style, animate } from '@angular/animations'
   styleUrls: [ './app.component.css' ],
   animations: [
     trigger('fadeIn', [
-      // state(),
-      transition('void => *', [
-        style({backgroundColor: 'green', opacity: 0}),
-        animate(500, style({backgroundColor: 'blue', opacity: 1}))
-      ]),
-      transition('* => void', [
-        style({opacity: 1}),
-        animate(500, style({opacity: 0}))
-      ])
+      state('void', style({opacity: 0})),
+      transition(':enter, :leave', [animate(500)])
+
     ])
   ]
 })
