@@ -1,4 +1,5 @@
 <hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
+<button (click)="show=!show">Toggle</button>
+<p @fadeIn *ngIf="show" >
+  Start editing to see some magic happen
 </p>
